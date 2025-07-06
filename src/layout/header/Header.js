@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './Header.module.scss';
 
 import logo from '../../assets/icons/logo-icon.png';
+import Button from '../../ui-kit/button/Button';
 
 const Header = () => {
+  const aboutRef = useRef(null);
+
   const scrollToTop = (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -11,6 +14,7 @@ const Header = () => {
       behavior: 'smooth',
     });
   };
+
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
@@ -28,6 +32,7 @@ const Header = () => {
             <li className={styles.header__nav_link}>Отзывы</li>
             <li className={styles.header__nav_link}>Контакты</li>
           </ul>
+          <Button className="secondary">получить решение</Button>
         </nav>
       </div>
     </header>

@@ -1,0 +1,45 @@
+@use '../../assets/styles/main' as *;
+
+.button__primary {
+  width: 400px;
+  height: 61px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: $font-size-large-caption;
+  background-color: $color-orange;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  // svg
+  &_arrow_svg {
+    transition: transform 0.2s ease;
+  }
+  &:hover &_arrow_svg {
+    transform: translateX(3px);
+  }
+  //
+
+  &:hover {
+    background-color: $color-orange-hover;
+  }
+}
+
+.button__secondary {
+  width: 302px;
+  height: 62px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: $font-size-large-caption;
+  color: $color-black;
+  border: none;
+  text-transform:  uppercase;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: $color-white-hover;
+  }
+}

@@ -30,54 +30,58 @@
   font-family: "Ubuntu-Regular";
   src: url("../fonts/ubuntu/Ubuntu-Regular.ttf") format("truetype");
 }
-.header {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
+.fact__card {
+  width: 20%;
+  height: 200px;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+}
+.fact__card_header {
   width: 100%;
-  height: 122px;
+  height: 40%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   display: flex;
-  align-items: center;
-  background-color: #0B0B0B;
-}
-.header__container {
-  width: 100%;
-  height: 62px;
-  display: flex;
-}
-.header__logo_area {
-  width: 35%;
-  height: 100%;
-  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.header__navigation {
-  width: 65%;
-  height: 100%;
+.fact__card_header_container {
+  width: 88%;
+  height: 48px;
   display: flex;
-  align-items: center;
-  gap: 30px;
+  justify-content: space-between;
 }
-.header__nav_list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-.header__nav_link {
+.fact__card_header_title {
+  font-size: 20px;
+  color: #0B0B0B;
   text-transform: uppercase;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
-}
-.header__nav_link:hover {
-  color: #F0813E;
+  font-weight: 500;
 }
 
-.logo {
-  width: 82.33px;
-  height: 41.84px;
-  margin-left: 30px;
+.fact__card_header_icon {
+  width: 48px;
+  height: 48px;
 }
 
-/*# sourceMappingURL=Header.module.css.map */
+.fact__cards_container {
+  width: 100%;
+  height: 50%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fact__cards_text_container {
+  width: 87%;
+  height: 92px;
+}
+
+.fact__container_text {
+  font-size: 20px;
+  font-weight: 400;
+  color: hsl(48, 7%, 59%);
+}
+
+/*# sourceMappingURL=FactCard.module.css.map */

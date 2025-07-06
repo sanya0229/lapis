@@ -30,54 +30,48 @@
   font-family: "Ubuntu-Regular";
   src: url("../fonts/ubuntu/Ubuntu-Regular.ttf") format("truetype");
 }
-.header {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
+.solutions {
   width: 100%;
-  height: 122px;
+  height: 1500px;
   display: flex;
-  align-items: center;
-  background-color: #0B0B0B;
+  justify-content: center;
+  margin-top: 150px;
 }
-.header__container {
+.solutions__container {
+  width: 97%;
+  height: 100%;
+  border-radius: 55px;
+}
+.solutions__header {
   width: 100%;
-  height: 62px;
+  height: 80px;
   display: flex;
+  justify-content: space-between;
 }
-.header__logo_area {
-  width: 35%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.header__navigation {
-  width: 65%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.header__nav_list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-.header__nav_link {
+.solutions__header_title {
+  font-size: 80px;
+  margin-left: 50px;
   text-transform: uppercase;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
 }
-.header__nav_link:hover {
-  color: #F0813E;
+.solutions__header_text {
+  font-size: 20px;
+  color: #9E9B90;
+  margin-top: 5px;
+  margin-right: 188px;
+}
+.solutions__section_cards {
+  width: 100%;
+  height: 1304px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.logo {
-  width: 82.33px;
-  height: 41.84px;
-  margin-left: 30px;
+.card_highlight {
+  color: #FFFFFF;
 }
 
-/*# sourceMappingURL=Header.module.css.map */
+/*# sourceMappingURL=Solutions.module.css.map */
