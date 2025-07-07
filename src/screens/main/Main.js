@@ -8,6 +8,8 @@ import Hero from '../sections/hero/Hero';
 import Solutions from '../sections/solutions/Solutions';
 import About from '../sections/about/About';
 import Advantages from '../sections/advantages/Advantages';
+import PromoBanner from '../sections/promoBanner/PromoBanner';
+import Portfolio from '../sections/portfolio/Portfolio';
 
 const Main = () => {
   return (
@@ -18,6 +20,8 @@ const Main = () => {
         <Solutions />
         <About />
         <Advantages />
+        <PromoBanner />
+        <Portfolio />
       </main>
       <Footer />
     </div>
