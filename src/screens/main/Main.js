@@ -10,20 +10,29 @@ import About from '../sections/about/About';
 import Advantages from '../sections/advantages/Advantages';
 import PromoBanner from '../sections/promoBanner/PromoBanner';
 import Portfolio from '../sections/portfolio/Portfolio';
+import Testimonials from '../sections/testimonials/Testimonials';
+import Request from '../sections/request/Request';
+import SocialPanel from '../sections/socialPanel/SocialPanel';
+import CostInfo from '../sections/costInfo/CostInfo';
 
 const Main = () => {
   return (
     <div className={styles.wrapper}>
-      <Header />
       <main className={styles.main}>
+        <Header />
+
         <Hero />
         <Solutions />
         <About />
         <Advantages />
         <PromoBanner />
         <Portfolio />
+        <Testimonials />
+        <Request />
+        <SocialPanel />
+        <CostInfo />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };

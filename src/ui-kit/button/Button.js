@@ -4,16 +4,15 @@ import arrow from '../../assets/icons/svg/arrow.svg';
 import styles from './Button.module.scss';
 
 const Button = ({ children, onClick, className }) => {
+  const buttonClass = styles[`button__${className}`] || styles['button__primary'];
+  const withArrow = className === 'primary' || className === 'primary_large';
+
   return (
-    <button
-      onClick={onClick}
-      className={styles[`button__${className}`] || styles['button__primary']}
-      type="button"
-    >
-      {className === 'primary' ? (
+    <button onClick={onClick} className={buttonClass} type="button">
+      {withArrow ? (
         <>
           {children}
-          <img className={styles.button__primary_arrow_svg} src={arrow} alt="arrow" />
+          <img className={styles.button__arrow_svg} src={arrow} alt="arrow" />
         </>
       ) : (
         children

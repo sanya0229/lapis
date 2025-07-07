@@ -6,6 +6,8 @@ import sliderImg from '../../../assets/images/slider-img.png';
 import arrowRightIcon from '../../../assets/icons/arrow-right-icon.png';
 import arrowLeftIcon from '../../../assets/icons/arrow-left-icon.png';
 
+import overlayArrowIcon from '../../../assets/icons/arrow-overlay-icon.png';
+
 const Portfolio = () => {
   return (
     <div className={styles.portfolio}>
@@ -21,6 +23,11 @@ const Portfolio = () => {
         </div>
         <div className={styles.portfolio__slider_container}>
           <div className={styles.portfolio__slider_wrapper}>
+            <div className={styles.slider__wrapper_overlay_container}>
+              <img src={overlayArrowIcon} alt="arrow icon" className={styles.wrapper_overlay_img} />
+            </div>
+            <div className={styles.slider__wrapper_overlay}></div>
+
             <h3 className={styles.portfolio__slider_wrapper_title}>Мессенджер Телетаск</h3>
             <img src={sliderImg} alt="" className={styles.slider__img} />
           </div>
