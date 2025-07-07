@@ -4,7 +4,7 @@ import Button from '../../../ui-kit/button/Button';
 
 const Hero = () => {
   return (
-    <div className={styles.hero}>
+    <section className={styles.hero}>
       <div className={styles.hero__container}>
         <div className={styles.hero__content}>
           <h1 className={styles.hero__title}>
@@ -22,7 +22,7 @@ const Hero = () => {
           <Button className="primary">Обсудить проект</Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

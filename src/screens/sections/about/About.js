@@ -5,7 +5,7 @@ import FactCard from './components/factCard/FactCard';
 
 const About = () => {
   return (
-    <div className={styles.about}>
+    <section className={styles.about}>
       <div className={styles.about__container}>
         <div className={styles.about__header}>
           <h2 className={styles.about__header_title}>о нас</h2>
@@ -24,7 +24,7 @@ const About = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

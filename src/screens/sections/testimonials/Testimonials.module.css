@@ -56,11 +56,13 @@
   height: 262px;
   margin-top: 50px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap;
   scrollbar-width: none;
   gap: 30px;
+  cursor: grabbing;
+  user-select: none;
 }
 
 /*# sourceMappingURL=Testimonials.module.css.map */

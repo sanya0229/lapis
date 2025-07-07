@@ -35,6 +35,8 @@
   height: 200px;
   background-color: #FFFFFF;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
 }
 .fact__card_header {
   width: 100%;
@@ -50,6 +52,7 @@
   height: 48px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .fact__card_header_title {
   font-size: 20px;
@@ -76,12 +79,15 @@
 .fact__cards_text_container {
   width: 87%;
   height: 92px;
+  display: flex;
+  align-items: center;
 }
 
 .fact__container_text {
   font-size: 20px;
   font-weight: 400;
   color: hsl(48, 7%, 59%);
+  line-height: 1.4;
 }
 
 /*# sourceMappingURL=FactCard.module.css.map */

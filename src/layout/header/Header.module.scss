@@ -38,7 +38,7 @@
     gap: 30px;
   }
 
-  &__nav_link{
+  &__nav_link {
     text-transform: uppercase;
     cursor: pointer;
     font-size: $font-size-large-caption;
@@ -47,7 +47,6 @@
       color: $color-orange;
     }
   }
-
 }
 
 .logo {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Request.module.scss';
 
@@ -7,8 +7,31 @@ import Input from '../../../ui-kit/input/Input';
 import Button from '../../../ui-kit/button/Button';
 
 const Request = () => {
+  const autoValue = 'Варфаламей';
+
+  const [values, setValues] = useState({
+    name1: '',
+    name2: '',
+    name3: '',
+    project: '',
+  });
+
+  const handleClick = (key) => {
+    setValues((prev) => ({
+      ...prev,
+      [key]: prev[key] === '' ? autoValue : '',
+    }));
+  };
+
+  const handleChange = (key, newValue) => {
+    setValues((prev) => ({
+      ...prev,
+      [key]: newValue,
+    }));
+  };
+
   return (
-    <div className={styles.request}>
+    <section className={styles.request}>
       <div className={styles.request__container}>
         <div className={styles.request__container_content}>
           <div className={styles.contact__invite}>
@@ -36,19 +59,49 @@ const Request = () => {
               </div>
             </div>
           </div>
+
           <div className={styles.request__form}>
             <div className={styles.request__form_primary}>
-              <Input type="text" placeholder="Ваше имя" name="text" className="primary" />
-              <Input type="text" placeholder="Ваше имя" name="text" className="primary" />
-              <Input type="text" placeholder="Ваше имя" name="text" className="primary" />
+              <Input
+                type="text"
+                placeholder="Ваше имя"
+                name="text1"
+                className="primary"
+                value={values.name1}
+                onClick={() => handleClick('name1')}
+                onChange={(e) => handleChange('name1', e.target.value)}
+              />
+              <Input
+                type="text"
+                placeholder="Ваше имя"
+                name="text2"
+                className="primary"
+                value={values.name2}
+                onClick={() => handleClick('name2')}
+                onChange={(e) => handleChange('name2', e.target.value)}
+              />
+              <Input
+                type="text"
+                placeholder="Ваше имя"
+                name="text3"
+                className="primary"
+                value={values.name3}
+                onClick={() => handleClick('name3')}
+                onChange={(e) => handleChange('name3', e.target.value)}
+              />
             </div>
+
             <div className={styles.request__form_secondary}>
               <Input
                 type="text"
                 placeholder="Опишите коротко, какой проект вас интересует"
-                name="text"
+                name="project"
                 className="secondary"
+                value={values.project}
+                onClick={() => handleClick('project')}
+                onChange={(e) => handleChange('project', e.target.value)}
               />
+
               <Button className="primary_large">Оставить заявку</Button>
               <a href="/" className={styles.request__form_text}>
                 Отправляя заявку, вы соглашаетесь на{' '}
@@ -58,7 +111,7 @@ const Request = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

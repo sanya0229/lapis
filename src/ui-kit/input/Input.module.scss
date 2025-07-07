@@ -10,6 +10,7 @@
   color: hsla(48, 7%, 59%, 1);
   cursor: pointer;
 }
+
 .input__secondary {
   width: 100%;
   height: 160px;
@@ -20,5 +21,9 @@
   background-color: $color-white;
   color: hsla(48, 7%, 59%, 1);
   cursor: pointer;
+}
 
+.input__primary:focus,
+.input__secondary:focus {
+  outline: none;
 }

@@ -11,7 +11,7 @@ import safetyGlasses from '../../../assets/icons/safety-glasses-icon.png';
 
 const Advantages = () => {
   return (
-    <div className={styles.advantages}>
+    <section className={styles.advantages}>
       <div className={styles.advantages__container}>
         <div className={styles.advantages__header}>
           <h2 className={styles.advantages__header_title}>преимущества</h2>
@@ -116,7 +116,7 @@ const Advantages = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

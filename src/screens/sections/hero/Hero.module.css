@@ -52,15 +52,19 @@
   margin-left: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
 }
 .hero__title {
   font-size: 90px;
   text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.2;
 }
 .hero__text {
   font-size: 16px;
   color: #9E9B90;
+  line-height: 1.6;
 }
 .hero__text_highlight {
   color: #F0813E;

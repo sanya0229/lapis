@@ -1,4 +1,5 @@
 @use '../../../../../assets/styles/main' as *;
+
 .card {
   width: 49%;
   height: 637px;
@@ -12,16 +13,19 @@
     margin-left: 50px;
     overflow: hidden;
   }
+
   &__container_title {
     font-size: $font-size-tertiary-title;
     text-transform: uppercase;
   }
+
   &__container_text {
     font-size: $font-size-large-text;
     color: $color-light-gray;
     font-weight: 400;
     margin-top: 37px;
   }
+
   &__container_img {
     margin-top: 37px;
 
@@ -29,11 +33,13 @@
       width: 95%;
       margin-top: 37px;
     }
+
     &_product3 {
       width: 92%;
       margin-top: 74px;
       margin-left: -10px;
     }
+
     &_product4 {
       width: 95%;
       margin-top: 74px;

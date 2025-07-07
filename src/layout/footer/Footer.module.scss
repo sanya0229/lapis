@@ -8,10 +8,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__text {
     font-size: $font-size-small-caption;
     color: hsla(48, 7%, 59%, 1);
   }
+
   &__link {
     font-size: $font-size-small-caption;
     color: hsla(48, 7%, 59%, 1);

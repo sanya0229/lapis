@@ -7,7 +7,7 @@ import product5 from '../../../assets/images/product5.png';
 
 const PromoBanner = () => {
   return (
-    <div className={styles.promo}>
+    <section className={styles.promo}>
       <div className={styles.promo__text_container}>
         <div className={styles.promo__text_container_content}>
           <h2 className={styles.promo__title}>
@@ -22,7 +22,7 @@ const PromoBanner = () => {
       <div className={styles.promo__image_container}>
         <img src={product5} alt="product5" />
       </div>
-    </div>
+    </section>
   );
 };
 

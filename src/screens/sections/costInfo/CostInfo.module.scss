@@ -6,10 +6,11 @@
   margin-top: 150px;
   display: flex;
   justify-content: center;
+
   &_container {
     width: 97%;
     height: 100%;
-    border-radius: 55px ;
+    border-radius: 55px;
     background-color: hsla(0, 0%, 14%, 1);
     display: flex;
     flex-direction: column;
@@ -17,10 +18,12 @@
     align-items: center;
     gap: 50px;
   }
-}
-.cost__info_container_title {
-  font-size: $font-size-table-title;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-align: center;
+
+  &_container_title {
+    font-size: $font-size-table-title;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+  }
 }

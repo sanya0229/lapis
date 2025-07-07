@@ -11,7 +11,7 @@ import linkedinIcon from '../../../assets/icons/social-media-icons/linkedin-icon
 
 const SocialPanel = () => {
   return (
-    <div className={styles.social}>
+    <section className={styles.social}>
       <div className={styles.social__container}>
         <SocialCard text="Позвонить" imgSrc={phoneIcon} imgAlt="phone icon" numText="t.me/lapis" />
 
@@ -35,7 +35,7 @@ const SocialPanel = () => {
           numText="@lapisservices"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

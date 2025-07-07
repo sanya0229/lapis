@@ -1,16 +1,28 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import styles from './Portfolio.module.scss';
 
-import sliderImg from '../../../assets/images/slider-img.png';
-import arrowRightIcon from '../../../assets/icons/arrow-right-icon.png';
-import arrowLeftIcon from '../../../assets/icons/arrow-left-icon.png';
-
+import arrowIcon from '../../../assets/icons/svg/arrow.svg';
 import overlayArrowIcon from '../../../assets/icons/arrow-overlay-icon.png';
+import Modal from '../../sections/portfolio/components/Modal/Modal';
+import { slidesData } from './data/SlidesData';
 
 const Portfolio = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const nextSlide = () => {
+    setCurrentSlideIndex((prev) => (prev === slidesData.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlideIndex((prev) => (prev === 0 ? slidesData.length - 1 : prev - 1));
+  };
+
   return (
-    <div className={styles.portfolio}>
+    <section className={styles.portfolio}>
       <div className={styles.portfolio__container}>
         <div className={styles.portfolio__header}>
           <h1 className={styles.portfolio__header_title}>портфолио</h1>
@@ -21,26 +33,64 @@ const Portfolio = () => {
             <br />и логистики до образования и финтеха.
           </p>
         </div>
+
         <div className={styles.portfolio__slider_container}>
-          <div className={styles.portfolio__slider_wrapper}>
+          <div className={styles.portfolio__slider_wrapper} onClick={openModal}>
             <div className={styles.slider__wrapper_overlay_container}>
               <img src={overlayArrowIcon} alt="arrow icon" className={styles.wrapper_overlay_img} />
             </div>
             <div className={styles.slider__wrapper_overlay}></div>
-
-            <h3 className={styles.portfolio__slider_wrapper_title}>Мессенджер Телетаск</h3>
-            <img src={sliderImg} alt="" className={styles.slider__img} />
+            <h3 className={styles.portfolio__slider_wrapper_title}>
+              {slidesData[currentSlideIndex].title}
+            </h3>
+            <img
+              src={slidesData[currentSlideIndex].preview}
+              alt="preview"
+              className={styles.slider__img}
+            />
           </div>
+
           <div className={styles.portfolio__slider_controls}>
-            <img src={arrowLeftIcon} alt="arrow left icon" />
-            <div className={styles.portfolio__slider_controls_track}>
-              <div className={styles.track__point}></div>
+            <div
+              className={styles.portfolio__slider_left_control}
+              onClick={prevSlide}
+              aria-label="Previous slide"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && prevSlide()}
+            >
+              <img src={arrowIcon} alt="arrow left" className={styles.slider__left_icon} />
             </div>
-            <img src={arrowRightIcon} alt="arrow right icon" />
+
+            <div className={styles.portfolio__slider_controls_track}>
+              <div
+                className={styles.portfolio__slider_controls_fill}
+                style={{
+                  width: `${((currentSlideIndex + 1) / slidesData.length) * 100}%`,
+                }}
+              ></div>
+            </div>
+
+            <div
+              className={styles.portfolio__slider_right_control}
+              onClick={nextSlide}
+              aria-label="Next slide"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && nextSlide()}
+            >
+              <img src={arrowIcon} alt="arrow right" className={styles.slider__right_icon} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        {slidesData[currentSlideIndex].images.map((src, i) => (
+          <img key={i} src={src} alt={`modal slide ${i + 1}`} className={styles.modal__image} />
+        ))}
+      </Modal>
+    </section>
   );
 };
 

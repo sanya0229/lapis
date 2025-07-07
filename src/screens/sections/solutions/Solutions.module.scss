@@ -1,4 +1,5 @@
 @use '../../../assets/styles/main' as *;
+
 .solutions {
   width: 100%;
   height: 1500px;
@@ -6,34 +7,32 @@
   justify-content: center;
   margin-top: 150px;
 
-  // container
   &__container {
     width: 97%;
     height: 100%;
     border-radius: 55px;
   }
 
-  // header
   &__header {
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
   }
-  &__header_title{
+
+  &__header_title {
     font-size: $font-size-secondary-title;
     margin-left: 50px;
-    text-transform:  uppercase;
+    text-transform: uppercase;
     font-weight: 500;
   }
+
   &__header_text {
     font-size: $font-size-large-text;
     color: $color-light-gray;
     margin-top: 5px;
     margin-right: 188px;
   }
-
-  // srction cards
 
   &__section_cards {
     width: 100%;
@@ -42,9 +41,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px
+    gap: 30px;
   }
 }
+
 .card_highlight {
-  color: $color-white
+  color: $color-white;
 }

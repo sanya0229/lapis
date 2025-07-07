@@ -20,7 +20,6 @@ const Main = () => {
     <div className={styles.wrapper}>
       <main className={styles.main}>
         <Header />
-
         <Hero />
         <Solutions />
         <About />

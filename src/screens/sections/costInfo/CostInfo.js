@@ -5,7 +5,7 @@ import Button from '../../../ui-kit/button/Button';
 
 const CostInfo = () => {
   return (
-    <div className={styles.cost__info}>
+    <section className={styles.cost__info}>
       <div className={styles.cost__info_container}>
         <h1 className={styles.cost__info_container_title}>
           Узнайте стоимость
@@ -16,7 +16,7 @@ const CostInfo = () => {
         </h1>
         <Button className="primary">Получить расчёт</Button>
       </div>
-    </div>
+    </section>
   );
 };
 

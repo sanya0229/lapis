@@ -53,4 +53,9 @@
   cursor: pointer;
 }
 
+.input__primary:focus,
+.input__secondary:focus {
+  outline: none;
+}
+
 /*# sourceMappingURL=Input.module.css.map */
